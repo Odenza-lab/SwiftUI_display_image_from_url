@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let urlString = "https://developer.apple.com/news/images/og/swiftui-og.png"
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            ImageView(urlString: urlString)
+                .frame(width: 678, height: 355)
+
+            Text("Display image from URL supporting iOS 13+")
         }
         .padding()
     }
